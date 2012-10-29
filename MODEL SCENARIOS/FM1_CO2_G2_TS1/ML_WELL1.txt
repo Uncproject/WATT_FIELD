@@ -1,0 +1,77 @@
+WELSPECS
+-- well     group     X    Y           Phase
+ 	well1 TEMPL1  78  32  1*   OIL   /
+ 	well1A TEMPL1  78  34  1*   OIL   /
+ 	well1B TEMPL1  78  36  1*   OIL   /
+/
+
+
+COMPDAT 
+-- Name 
+   
+   WELL1  78 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  79 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  80 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  81 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  82 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  83 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  84 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  85 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  86 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  87 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  88 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  89 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  90 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  91 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1  92 32 1  1   OPEN 0 1* 0.333 3*  X  /
+ 
+
+   
+   WELL1A  78 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  79 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  80 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  81 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  82 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  83 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  84 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  85 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  86 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  87 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  88 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  89 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  90 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  91 34 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1A  92 34 1  1   OPEN 0 1* 0.333 3*  X  /
+
+   
+   WELL1B  78 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  79 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  80 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  81 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  82 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  83 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  84 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  85 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  86 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  87 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  88 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  89 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  90 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  91 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL1B  92 36 1  1   OPEN 0 1* 0.333 3*  X  /
+ 
+/
+
+
+
+WCONPROD
+WELL1      	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+WELL1A     	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+WELL1B   	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+/
+
+COMPORD
+WELL1  INPUT /
+WELL1A INPUT/
+WELL1B INPUT/
+/

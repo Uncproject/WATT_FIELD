@@ -1,0 +1,66 @@
+WELSPECS
+-- well    group   x  y      phase  
+   inj1    TEMPL1  7 13  1* WATER   /
+   inj2    TEMPL1  3 20  1* WATER   /   
+   inj3    TEMPL1  6 22  1* WATER   /
+   inj4    TEMPL1  31 12  1* WATER   /
+   inj5    TEMPL1  43 9  1* WATER   /
+   inj6    TEMPL1  70 17  1* WATER   /
+   B       TEMPL1  74 14  1* WATER  /
+ /
+
+COMPDAT 
+--  well    X   Y  Ztop  Zbot  status   well ID     Orientation  
+   inj1    7    13  1    1     OPEN     1*   1*  0.500 3* X /
+   inj1    8    13  1    1     OPEN     1*   1*  0.500 3* X /
+   inj1    9    13  2    2     OPEN     1*   1*  0.500 3* X /
+   inj1    10   13  3    3     OPEN     1*   1*  0.500 3* X /
+   inj1    11   13  4    4     OPEN     1*   1*  0.500 3* X /
+   inj1    12   13  5    5     OPEN     1*   1*  0.500 3* X /
+   inj1    13   13  5    5     OPEN     1*   1*  0.500 3* X /
+   
+ 
+   inj3    6   22  1   1     OPEN     1*   1*  0.500 3* X /
+   inj3    6   23  2   2     OPEN     1*   1*  0.500 3* X /
+   inj3    6   24  3   3     OPEN     1*   1*  0.500 3* X /
+   inj3    6   25  4   4     OPEN     1*   1*  0.500 3* X /
+   inj3    6   26  5   5     OPEN     1*   1*  0.500 3* X /
+   inj3    6   27  6   6     OPEN     1*   1*  0.500 3* X /
+   inj3    6   28  7   7     OPEN     1*   1*  0.500 3* X /
+   
+   inj2    3   20  1   1     OPEN     1*   1*  0.500 3* X /
+   inj2    3   19  2   2     OPEN     1*   1*  0.500 3* X /
+   inj2    3   18  3   3     OPEN     1*   1*  0.500 3* X /
+   inj2    3   17  4   4     OPEN     1*   1*  0.500 3* X /
+   inj2    3   16  5   5     OPEN     1*   1*  0.500 3* X /
+   inj2    3   15  6   6     OPEN     1*   1*  0.500 3* X /
+ 
+   
+   inj4   31   12  1    1     OPEN     1*   1*  0.500 3* X /
+   inj4   32   12  2    2     OPEN     1*   1*  0.500 3* X /
+   inj4   33   12  3    3     OPEN     1*   1*  0.500 3* X /
+   inj4   34   12  4    4     OPEN     1*   1*  0.500 3* X /
+   inj4   35   12  5    5     OPEN     1*   1*  0.500 3* X /
+   inj4   36   12  5    5     OPEN     1*   1*  0.500 3* X /
+
+   inj5    43   9  1   1      OPEN     1*   1*  0.500 3* X /
+   inj5    44   9  2   2      OPEN     1*   1*  0.500 3* X /
+   inj5    45   9  3   3      OPEN     1*   1*  0.500 3* X /
+   inj5    46   9  4   4      OPEN     1*   1*  0.500 3* X /
+   inj5    47   9  5   5      OPEN     1*   1*  0.500 3* X /
+   inj5    48   9  6   6      OPEN     1*   1*  0.500 3* X /
+
+   inj6    70  17     1  25  OPEN  1*  1* 0.500 3*  Y /
+   
+   B     74  14   1   15   OPEN  1*  1* 0.500 3*  Z /   
+/
+WCONINJE
+    inj1  WAT  OPEN  RATE  12500  1*  3500 /
+    inj2  WAT  OPEN  RATE  15000  1*  3500  /
+    inj3  WAT  OPEN  RATE  15000  1*  3500  /
+    inj4  WAT  OPEN  RATE  15000  1*  3500  /
+    inj5  WAT  OPEN  RATE  15000  1*  3500  /
+    inj6  WAT  OPEN  RATE  15000  1*  3500  /
+     B  WAT  OPEN  RATE  10000  1*  3500  /
+
+/

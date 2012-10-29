@@ -1,0 +1,14 @@
+
+MULTFLT
+-- Multiplier (no diffusion)
+
+'FAULT6'   0.2  / 
+'FAULT2'   0.1  / 
+'FAULT3'   0.5  /
+'FAULT5'   1.0  /
+'FAULT7'   1.0  /
+'FAULT9'   0.65  /
+'FAULT8'   1.0  /
+'FAULT4'   1.0  /
+'FAULT1'   1.0  /
+/

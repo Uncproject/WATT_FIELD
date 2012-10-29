@@ -1,0 +1,288 @@
+--
+--
+--
+--
+-- Field IPE1
+--
+-- 
+-- 
+-- Dan
+--
+--================================================================
+RUNSPEC
+
+
+TITLE
+Field A
+
+-- NOSIM
+
+--        Number of cells
+--       NX      NY      NZ
+--       --      --      --
+DIMENS
+          226     59     21 /
+
+
+
+-- Phases
+OIL
+WATER
+
+
+FAULTDIM
+ 3000 /
+
+-- Units
+FIELD
+
+
+-- Maximum well/connection/group values
+--     #wells  #cons/w  #grps  #wells/grp
+--     ------  -------  -----  ----------
+WELLDIMS
+         35     120      35       1 /
+
+-- Maximum number of saturation (relative permeability) tables
+TABDIMS
+ 3  2  100 100 /
+
+-- Memory allocation
+NSTACK
+  100 /
+
+-- Allow 5000 warnings, messages, but terminate on 1st error message
+MESSAGES
+  11*5000  1  /
+
+
+-- Unified output files
+UNIFOUT
+
+
+-- Simulation start date
+START
+  1 JAN 2011/
+
+
+
+
+
+
+--================================================================
+GRID
+
+
+-- Include corner point geometry model
+INCLUDE
+   'G2_TS1_FM1_Grid' /
+
+INCLUDE
+   'INCLUDE\OBJECT\G2_CO2_object_Perm.inc' /
+INCLUDE
+   'INCLUDE\OBJECT\G2_CO2_object_Poro.inc' /
+
+COPY
+     PERMX  PERMY /
+     PERMX  PERMZ /
+/
+
+MULTIPLY
+	PERMZ 0.1 /
+/
+
+
+INCLUDE
+   'G2_TS1_FM1_Faults' /
+
+INCLUDE
+    'mltfltfix2.txt' /
+
+
+
+-- Output file with geometry and rock properties (.INIT)
+INIT
+
+
+
+
+
+--================================================================
+PROPS
+
+
+--Surface values
+
+DENSITY
+              50.91    62.4       /
+/
+
+
+
+
+PVDO
+
+			1300		1.25		0.87	
+			2200		1.24		0.93	
+			2900            1.23            0.98  /
+/
+
+
+
+-- Water:  Pwat    Bw      Cw    viscosity   
+PVTW
+           5111   1.01   2.9E-6     0.4 /
+/
+RSCONST
+ 0.35  932  /
+
+-- Check for these data in the future this is important 
+INCLUDE
+  'ROCK-RELPERMS.INC'  /
+
+-- Rock compressibility
+ROCK
+   4500   4.0E-06 /
+
+/
+
+
+REGIONS
+
+
+INCLUDE
+ 'INCLUDE\OBJECT\G2_CO2_object_satnum.inc'  /
+
+
+
+
+--================================================================
+SOLUTION
+
+-- Initial conditions
+--  Depth   pressure      OWC     Pc@OWC    
+EQUIL
+    5200      2436        5326      0.0  /
+
+-- Output initial values of recurrent grid data (eg pressures, saturations)
+RPTRST
+  BASIC=2  /
+
+-- Output initial Fluid in Place values
+RPTSOL
+  FIP=1  /
+
+--================================================================
+SUMMARY
+
+
+INCLUDE
+ 'SUMMARY.INC' /
+
+
+-- CPU usage
+TCPU
+
+-- Create Excel readable Run Summary file (.RSM)
+EXCEL
+
+-- Only create output each report step
+RPTONLY
+
+
+
+
+
+
+--================================================================
+SCHEDULE
+
+-- Output values of recurrent grid data (eg pressures, saturations)
+RPTRST
+  BASIC=2  /
+
+--- Add new injectors --------------------------------------------
+
+INCLUDE
+    'InjectorHorNewDAN.txt'  /
+
+
+
+
+-- Use all memory allocated in NSTACK
+TUNING
+ /
+ /
+ 2*  100 /
+
+
+
+--- Adding Production wells ----------------------------------
+
+INCLUDE
+    'ML_WELL1.txt' /
+
+INCLUDE 
+   'ML_WELL9.txt' /    
+
+INCLUDE
+    'ML_WELL4.txt'  /
+
+INCLUDE 
+   'ML_WELL6.txt' /
+    
+TSTEP 
+  31 31 31 31 31 /
+
+INCLUDE 
+   'ML_WELL8.txt' /
+
+INCLUDE 
+    'ML_WELL3.txt'  /
+   
+TSTEP 
+  31 31 31 31 31 /
+
+
+INCLUDE 
+    'ML_WELL2.txt' /
+
+TSTEP 
+  31 31 31 31 /
+
+INCLUDE 
+   'ML_WELL5.txt' /
+
+TSTEP 
+  31 31 31/
+
+INCLUDE 
+   'ML_WELL7.txt' /
+   
+WCONINJE
+    inj1  WAT  OPEN  RATE  19000  1*  3500 /
+    inj2  WAT  OPEN  RATE  19000  1*  3500  /
+    inj3  WAT  OPEN  RATE  19000  1*  3500  /
+    inj4  WAT  OPEN  RATE  19000  1*  3500  /
+    inj5  WAT  OPEN  RATE  19000  1*  3500  /
+    inj6  WAT  OPEN  RATE  19000  1*  3500  /
+     B  WAT  OPEN  RATE  11000  1*  3500  /
+/
+TSTEP 
+  31 31 31/
+
+INCLUDE 
+   'ML_WELL10.txt' /
+/
+
+/
+TSTEP 
+  31 31 31/
+------------------------------------------------------------------------
+
+
+TSTEP 
+74*30 /
+
+
+END
