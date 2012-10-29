@@ -1,0 +1,39 @@
+WELSPECS
+-- well     group     X    Y           Phase
+ 	WELL2 TEMPL1  29  22  1*   OIL   /
+ 	WELL2A TEMPL1  29  24  1*   OIL   /
+
+/
+
+
+COMPDAT 
+-- Name 
+   WELL2   29 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   30 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   31 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   32 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   33 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   34 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   35 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2   36 22 3 3   OPEN 0 1* 0.333 3*  X  /
+   
+   WELL2A  29 24 3 3   OPEN 0 1* 0.333 3*  X  /	            
+   WELL2A  30 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2A  31 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2A  32 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2A  33 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2A  34 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2A  35 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL2A  36 24 3 3   OPEN 0 1* 0.333 3*  X  /
+   
+	            
+
+/
+
+
+WCONPROD
+WELL2      	OPEN 	LRAT 	3*	6500 1* 1000  2*    /
+WELL2A     	OPEN 	LRAT 	3*	6500 1* 1000  2*    /
+
+
+/

@@ -1,0 +1,47 @@
+WELSPECS
+-- well     group     X    Y           Phase
+ 	WELL5  TEMPL1  19  17  1*   OIL   /
+ 	WELL5A TEMPL1  19  19  1*   OIL   /
+/
+
+
+
+
+COMPDAT 
+-- Name 
+   WELL5   19 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   20 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   21 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   22 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   23 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   24 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   25 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5   26 17 3 3   OPEN 0 1* 0.333 3*  X  /
+   
+	             
+   WELL5A  19 19 3 3   OPEN 0 1* 0.333 3*  X  /   
+   WELL5A  20 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5A  21 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5A  22 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5A  23 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5A  24 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5A  25 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   WELL5A  26 19 3 3   OPEN 0 1* 0.333 3*  X  /
+   
+
+
+
+
+
+
+
+
+
+/
+
+
+WCONPROD
+WELL5      	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+WELL5A     	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+
+/

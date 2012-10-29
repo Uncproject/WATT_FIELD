@@ -1,0 +1,30 @@
+WELSPECS
+-- well     group     X    Y           Phase
+	WELL6 TEMPL1  104  40  1*   OIL  4*  1 /
+/
+
+COMPDAT 
+-- Name 
+   WELL6 104 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 105 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 106 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 107 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 108 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 109 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 110 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 111 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 112 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 113 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 114 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL6 115 40 1  1   OPEN 0 1* 0.333 3*  X  /
+   
+ /
+ 
+
+WCONPROD
+WELL6      	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+/
+
+COMPORD
+WELL6  INPUT /
+/

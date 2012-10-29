@@ -1,0 +1,282 @@
+--
+--
+--
+--
+-- Field IPE1
+--
+-- 
+-- 
+-- Dan
+--
+--================================================================
+RUNSPEC
+
+
+TITLE
+IPE1
+
+-- NOSIM
+
+--        Number of cells
+--       NX      NY      NZ
+--       --      --      --
+DIMENS
+         112 30 40 /
+
+
+
+-- Phases
+OIL
+WATER
+
+
+FAULTDIM
+6000 /
+
+-- Units
+FIELD
+
+
+
+-- Maximum well/connection/group values
+--     #wells  #cons/w  #grps  #wells/grp
+--     ------  -------  -----  ----------
+WELLDIMS
+         35     120      35       1 /
+
+-- Maximum number of saturation (relative permeability) tables
+TABDIMS
+-- 3  2  100 100 /
+ 1  2  100 100 /
+
+-- Memory allocation
+NSTACK
+  100 /
+
+-- Allow 5000 warnings, messages, but terminate on 1st error message
+MESSAGES
+  11*5000  1  /
+
+
+-- Unified output files
+UNIFOUT
+
+
+-- Simulation start date
+START
+  1 JAN 2011/
+
+
+
+
+
+
+--================================================================
+GRID
+
+
+-- Include corner point geometry model
+INCLUDE
+   'G3_TS1_FM2_Grid' /
+
+
+INCLUDE
+   'INCLUDE\OBJECT\G3_CO3_object_Perm.inc' /
+INCLUDE
+   'INCLUDE\OBJECT\G3_CO3_object_Poro.inc' /
+
+COPY
+     PERMX  PERMY /
+     PERMX  PERMZ /
+/
+
+MULTIPLY
+	PERMZ 0.1 /
+/
+
+
+INCLUDE
+   'G3_TS1_FM2_Faults' /
+
+INCLUDE
+    'mltfltfix2.txt' /
+
+
+
+-- Output file with geometry and rock properties (.INIT)
+INIT
+
+
+
+
+
+--================================================================
+PROPS
+
+
+--Surface values
+
+DENSITY
+              50.91    62.4       /
+/
+
+
+
+
+PVDO
+
+			1300		1.25		0.87	
+			2200		1.24		0.93	
+			2900            1.23            0.98  /
+/
+
+
+-- Check for these data in the future this is important 
+-- Water:  Pwat    Bw      Cw    viscosity   
+PVTW
+           5111   1.01   2.9E-6     0.4 /
+/
+RSCONST
+ 0.35  932  /
+
+INCLUDE
+  'ROCK-RELPERMS.INC'  /
+
+-- think about changing this is extremely important to put in mind ...
+-- Rock compressibility
+ROCK
+   4500   4.0E-06 /
+
+/
+
+
+REGIONS
+
+
+INCLUDE
+ 'INCLUDE\OBJECT\G3_CO3_object_satnum.inc'  /
+
+
+--================================================================
+SOLUTION
+
+-- Initial conditions
+--  Depth   pressure      OWC     Pc@OWC    
+EQUIL
+    5200      2436        5326      0.0  /
+
+-- Output initial values of recurrent grid data (eg pressures, saturations)
+RPTRST
+  BASIC=2  /
+
+-- Output initial Fluid in Place values
+RPTSOL
+  FIP=1  /
+
+--================================================================
+SUMMARY
+
+
+INCLUDE
+ 'SUMMARY.INC' /
+
+
+-- CPU usage
+TCPU
+
+-- Create Excel readable Run Summary file (.RSM)
+EXCEL
+
+-- Only create output each report step
+RPTONLY
+
+
+
+
+
+
+--================================================================
+SCHEDULE
+
+-- Output values of recurrent grid data (eg pressures, saturations)
+RPTRST
+  BASIC=2  /
+
+
+--- Add new injectors --------------------------------------------
+INCLUDE
+    'InjectorHorNewDAN_200.txt'  /
+
+-- Use all memory allocated in NSTACK
+TUNING
+ /
+ /
+ 2*  100 /
+
+
+--- Adding wells every 6 months ----------------------------------
+
+INCLUDE
+    'ML_WELL1_200.txt' /
+
+INCLUDE 
+   'ML_WELL9_200.txt' /    
+
+INCLUDE
+    'ML_WELL4_200.txt'  /
+
+INCLUDE 
+   'ML_WELL6_200.txt' /
+    
+TSTEP 
+  31 31 31 31 31 /
+
+INCLUDE 
+   'ML_WELL8_200.txt' /
+
+INCLUDE 
+    'ML_WELL3_200.txt'  /
+   
+TSTEP 
+  31 31 31 31 31 /
+
+
+INCLUDE 
+    'ML_WELL2_200.txt' /
+
+TSTEP 
+  31 31 31 31 /
+
+INCLUDE 
+   'ML_WELL5_200.txt' /
+
+TSTEP 
+  31 31 31/
+
+INCLUDE 
+   'ML_WELL7_200.txt' /
+   
+WCONINJE
+    inj1  WAT  OPEN  RATE  19000  1*  3500 /
+    inj2  WAT  OPEN  RATE  19000  1*  3500  /
+    inj3  WAT  OPEN  RATE  19000  1*  3500  /
+    inj4  WAT  OPEN  RATE  19000  1*  3500  /
+    inj5  WAT  OPEN  RATE  19000  1*  3500  /
+    inj6  WAT  OPEN  RATE  19000  1*  3500  /
+     B  WAT  OPEN  RATE  11000  1*  3500  /
+/
+TSTEP 
+  31 31 31/
+
+INCLUDE 
+   'ML_WELL10_200.txt' /
+/
+TSTEP 
+  31 31 31/
+
+------------------------------------------------------------------------
+
+TSTEP 
+73*30 /
+
+END
