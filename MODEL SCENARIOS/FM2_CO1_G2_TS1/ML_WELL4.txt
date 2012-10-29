@@ -1,0 +1,51 @@
+WELSPECS
+-- well     group     X    Y           Phase
+	WELL4  TEMPL1  104  32  1*   OIL  4*  1 /
+	WELL4A TEMPL1  104  36  1*   OIL  4*  1 /
+/
+
+COMPDAT 
+-- Name 
+   
+   WELL4 104 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 105 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 106 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 107 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 108 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 109 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 110 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 111 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 112 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 113 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 114 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 115 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 116 32 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4 117 32 1  1   OPEN 0 1* 0.333 3*  X  /
+	 
+   WELL4A 104 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4A 105 36 1  1   OPEN 0 1* 0.333 3*  X  /
+   WELL4A 106 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 107 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 108 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 109 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 110 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 111 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 112 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 113 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 114 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 115 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 116 36 1  1  OPEN 0 1* 0.333 3*  X  /
+   WELL4A 117 36 1  1  OPEN 0 1* 0.333 3*  X  /
+ /
+ 
+
+WCONPROD
+WELL4      	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+WELL4A     	OPEN 	LRAT 	3*	8000 1* 1000  2*    /
+
+/
+
+COMPORD
+WELL4  INPUT /
+WELL4A INPUT/
+/
