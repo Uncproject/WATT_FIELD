@@ -27,4 +27,4 @@ The final folder is the RAW DATA folder which contains all the raw data required
 
 QUESTIONS
 
-If you have any questions about the field please contact heriot-watt university or dan.arnold@pet.hw.ac.uk.
+If you have any questions about the field please contact heriot-watt university or d.p.arnold@hw.ac.uk.
